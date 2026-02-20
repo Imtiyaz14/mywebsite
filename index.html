@@ -61,7 +61,7 @@ button:hover {
 
 <div class="card">
     <h2>🌙 Ramzan Mubarak 🌙</h2>
-    <p>Apna naam likho aur roza status check karo 😎</p>
+    <p>Apna naam likho aur surprise paao😎</p>
 
     <input type="text" id="name" placeholder="Apna naam likho">
     <button onclick="prank()">Check</button>
@@ -74,15 +74,15 @@ function prank() {
     var name = document.getElementById("name").value;
     var result = document.getElementById("result");
 
-    result.innerHTML = "⏳ System roza verify kar raha hai...";
+    result.innerHTML = "⏳ System verify kar raha hai...";
 
     setTimeout(function() {
-        result.innerHTML = "🔍 Sehri attendance check ho rahi hai...";
+        result.innerHTML = "🔍 Serprise open ho raha he...";
     }, 3000);
 
     setTimeout(function() {
         result.innerHTML = "✅ Mubarak ho " + name + "! Tum kabhi nahi sudhroge🎉";
-    }, 8000);
+    }, 9000);
 
     setTimeout(function() {
         result.innerHTML = " bhai ab to mobile rakhde roza rakha he namaz padho Quran padho lakin tumko mobile se fursat mile tabna dekho abhi v mobile dekh raha he😜😂";
