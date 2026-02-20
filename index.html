@@ -1,82 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Cool Website</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4e73df, #1cc88a);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<title>Ramzan Special 😎</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            text-align: center;
-            width: 300px;
-        }
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+    color: white;
+}
 
-        h1 {
-            margin-bottom: 20px;
-        }
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 320px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+}
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #4e73df;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #00c9a7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        button:hover {
-            background: #2e59d9;
-        }
+button:hover {
+    background: #00a98f;
+}
 
-        #result {
-            margin-top: 15px;
-            font-weight: bold;
-            color: green;
-        }
-    </style>
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
 <div class="card">
-    <h1>Welcome 😎</h1>
+    <h2>🌙 Ramzan Mubarak 🌙</h2>
+    <p>Apna naam likho aur surprise dekho 😎</p>
 
     <input type="text" id="name" placeholder="Apna naam likho">
-    <input type="number" id="age" placeholder="Apni age likho">
-    <button onclick="showData()">Submit</button>
+    <button onclick="prank()">Check</button>
 
     <p id="result"></p>
 </div>
 
 <script>
-function showData() {
+function prank() {
     var name = document.getElementById("name").value;
-    var age = document.getElementById("age").value;
+    var result = document.getElementById("result");
 
-    document.getElementById("result").innerHTML =
-        "Hello " + name + " 🎉 Tum " + age + " saal ke ho!";
+    result.innerHTML = "⏳ Checking your Roza status...";
+
+    setTimeout(function() {
+        result.innerHTML = "😱 " + name + " !!! Aaj tumne sehri me khana khaya thha ne... ";
+    }, 2000);
+
+    setTimeout(function() {
+        result.innerHTML = "😂😂 Just Kidding! aj masjid me briyani bategi sabse pehle tum chale jana dekho kitna serious ho raha he😂😂? 😜";
+    }, 4000);
 }
 </script>
 
 </body>
-</html>
+</html> 
