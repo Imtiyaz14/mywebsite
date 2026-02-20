@@ -50,8 +50,9 @@ button:hover {
 }
 
 #result {
-    margin-top: 15px;
+    margin-top: 20px;
     font-weight: bold;
+    min-height: 40px;
 }
 </style>
 </head>
@@ -60,7 +61,7 @@ button:hover {
 
 <div class="card">
     <h2>🌙 Ramzan Mubarak 🌙</h2>
-    <p>Apna naam likho aur surprise dekho 😎</p>
+    <p>Apna naam likho aur roza status check karo 😎</p>
 
     <input type="text" id="name" placeholder="Apna naam likho">
     <button onclick="prank()">Check</button>
@@ -73,17 +74,21 @@ function prank() {
     var name = document.getElementById("name").value;
     var result = document.getElementById("result");
 
-    result.innerHTML = "⏳ Checking your Roza status...";
+    result.innerHTML = "⏳ System roza verify kar raha hai...";
 
     setTimeout(function() {
-        result.innerHTML = "😱 " + name + " !!! Aaj tumne sehri me khana khaya thha ne... ";
-    }, 2000);
+        result.innerHTML = "🔍 Sehri attendance check ho rahi hai...";
+    }, 3000);
 
     setTimeout(function() {
-        result.innerHTML = "😂😂 Just Kidding! aj masjid me briyani bategi sabse pehle tum chale jana dekho kitna serious ho raha he😂😂? 😜";
-    }, 4000);
+        result.innerHTML = "✅ Mubarak ho " + name + "! Tum kabhi nahi sudhroge🎉";
+    }, 8000);
+
+    setTimeout(function() {
+        result.innerHTML = " bhai ab to mobile rakhde roza rakha he namaz padho Quran padho lakin tumko mobile se fursat mile tabna dekho abhi v mobile dekh raha he😜😂";
+    }, 13000);
 }
 </script>
 
 </body>
-</html> 
+</html>
