@@ -1,33 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Secret Test</title>
-</head>
-<body style="text-align:center; font-family:Arial;">
+    <title>My Cool Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e59d9;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
     <h1>Welcome 😎</h1>
 
-    <input type="text" id="name" placeholder="Apna naam likho"><br><br>
-    <input type="number" id="age" placeholder="Apni age likho"><br><br>
+    <input type="text" id="name" placeholder="Apna naam likho">
+    <input type="number" id="age" placeholder="Apni age likho">
+    <button onclick="showData()">Submit</button>
 
-    <button onclick="checkAge()">Submit</button>
+    <p id="result"></p>
+</div>
 
-    <h2 id="result"></h2>
+<script>
+function showData() {
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
 
-    <script>
-        function checkAge() {
-            var name = document.getElementById("name").value;
-            var age = document.getElementById("age").value;
-
-            if(age >= 18) {
-                document.getElementById("result").innerHTML =
-                "Oh Mr " + name + " 😆 bhai achha kaam karle din bhar mobile chalate rehta he Ramzan ka mahina he kuch to saram kar";
-            } else {
-                document.getElementById("result").innerHTML =
-                "Are " + name + " 😂 Tum abhi chote ho!";
-            }
-        }
-    </script>
+    document.getElementById("result").innerHTML =
+        "Hello " + name + " 🎉 Tum " + age + " saal ke ho!";
+}
+</script>
 
 </body>
 </html>
